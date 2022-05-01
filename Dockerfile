@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     vim
 WORKDIR /opt
+COPY condominium-analysis /opt
 RUN wget "https://repo.continuum.io/archive/Anaconda3-2020.07-Linux-x86_64.sh" && \
     sh /opt/Anaconda3-2020.07-Linux-x86_64.sh -b -p /opt/anaconda3 && \
     rm -f Anaconda3-2020.07-Linux-x86_64.sh
